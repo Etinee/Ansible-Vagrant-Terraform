@@ -1,0 +1,11 @@
+---
+- hosts: default
+  become: true
+  collections:
+    - mateplo.wordpress_lab
+
+  tasks:
+    - name: Import wordpress role
+      ansible.builtin.import_role:
+        name: wordpress
+
